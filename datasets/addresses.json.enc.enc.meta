@@ -1,0 +1,7 @@
+{
+  "original_filename": "addresses.json.enc",
+  "encrypted_filename": "addresses.json.enc.enc",
+  "encryption_timestamp": "2025-03-14T05:51:53.142615",
+  "data_hash": "27bc55514675be7fcb58573621ac654dd0ff14bdb3c1550bf4f11f6280eaebd4",
+  "encryption_method": "AES-256-CBC"
+}

@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Node
+node_modules/
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Hardhat
+cache/
+artifacts/
+
+# Misc
+.DS_Store

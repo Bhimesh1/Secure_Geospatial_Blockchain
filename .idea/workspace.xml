@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9d3088b2-237c-4828-bcbb-344c3f62b195" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Secure_Geospatial_Blockchain.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README2.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/api/routes/blockchain_routes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/api/routes/data_routes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/blockchain/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/blockchain/blockchain_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/blockchain/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/data_processing/extract_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/encrypt_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/craco.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/postcss.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/tailwind.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/process_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart_contracts/contracts/GeoDataStorage.sol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart_contracts/hardhat.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart_contracts/scripts/deploy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart_contracts/scripts/store_hash.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/smart_contracts/test/GeoDataStorage.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/store_encrypted_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_blockchain.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_fastapi.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2uBykofUz1KQZvszFhyDFN2EJWg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\@Thesis\Project\project_sgb_v2\Secure_Geospatial_Blockchain\frontend\secure-geo-blockchain-new" />
+      <recent name="D:\@Thesis\Project\project_sgb_v2\Secure_Geospatial_Blockchain\frontend" />
+      <recent name="D:\@Thesis\Project\project_sgb_v2\Secure_Geospatial_Blockchain" />
+      <recent name="D:\@Thesis\Project\project_sgb_v2\Secure_Geospatial_Blockchain\backend\data_processing" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-14705d77f0bb-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.25659.43" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9d3088b2-237c-4828-bcbb-344c3f62b195" name="Changes" comment="" />
+      <created>1741736408344</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1741736408344</updated>
+    </task>
+    <servers />
+  </component>
+</project>
