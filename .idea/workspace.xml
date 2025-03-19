@@ -4,36 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d3088b2-237c-4828-bcbb-344c3f62b195" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Secure_Geospatial_Blockchain.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README2.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/api/routes/blockchain_routes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/api/routes/data_routes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/blockchain/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/blockchain/blockchain_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/blockchain/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/data_processing/extract_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/encrypt_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/craco.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/postcss.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/tailwind.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/process_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/smart_contracts/contracts/GeoDataStorage.sol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/smart_contracts/hardhat.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/smart_contracts/scripts/deploy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/smart_contracts/scripts/store_hash.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/smart_contracts/test/GeoDataStorage.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/store_encrypted_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_blockchain.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_fastapi.py" afterDir="false" />
-    </list>
+    <list default="true" id="9d3088b2-237c-4828-bcbb-344c3f62b195" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
