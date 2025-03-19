@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  api:
+    build: .
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./datasets:/app/datasets
+    environment:
+      - BLOCKCHAIN_PROVIDER=http://ganache:8545
+      - CONTRACT_ADDRESS=${CONTRACT_ADDRESS}
+      - PRIVATE_KEY=${PRIVATE_KEY}
+    depends_on:
+      - ganache
+
+  frontend:
+    build: ./frontend/secure-geo-blockchain
+    ports:
+      - "80:80"
+    depends_on:
+      - api
+
+  ganache:
+    image: trufflesuite/ganache-cli:latest
+    ports:
+      - "8545:8545"
+    command: --deterministic --mnemonic "test test test test test test test test test test test junk"
