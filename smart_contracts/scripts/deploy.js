@@ -1,9 +1,8 @@
-// deploy.js
-const hre = require("hardhat");
+const { ethers } = require("hardhat");
 
 async function main() {
   // Get the contract factory
-  const GeoDataStorage = await hre.ethers.getContractFactory("GeoDataStorage");
+  const GeoDataStorage = await ethers.getContractFactory("GeoDataStorage");
 
   // Deploy the contract
   const geoDataStorage = await GeoDataStorage.deploy();

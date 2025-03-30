@@ -5,18 +5,89 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d3088b2-237c-4828-bcbb-344c3f62b195" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README_Expl.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/deployment.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/nginx.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/smart_contracts/scripts/deploy-goerli.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test_backend.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testing/test_frontend.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/craco.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/nginx.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/postcss.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/src/App.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/src/components/blockchain/AccessControl.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/src/components/blockchain/BlockchainStorage.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/src/components/blockchain/DataRetrieval.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/src/components/data/EncryptionForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/src/components/data/FileList.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/src/components/data/FileUpload.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/src/components/layout/Footer.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/src/components/layout/Navbar.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/src/components/layout/Sidebar.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/src/components/map/MapView.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/src/pages/BlockchainManagement.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/src/pages/Dashboard.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/src/pages/DataManagement.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/src/pages/Home.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/src/services/api.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/src/services/web3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain-new/tailwind.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/postcss.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/src/App.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/src/components/blockchain/AccessControl.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/src/components/blockchain/BlockchainStorage.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/src/components/blockchain/DataRetrieval.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/src/components/data/EncryptionForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/src/components/data/FileList.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/src/components/data/FileUpload.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/src/components/layout/Footer.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/src/components/layout/Navbar.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/src/components/layout/Sidebar.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/src/components/map/MapView.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/src/pages/BlockchainManagement.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/src/pages/Dashboard.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/src/pages/DataManagement.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/src/pages/Home.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/src/services/api.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/src/services/web3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/secure-geo-blockchain/tailwind.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/smart_contracts/hardhat.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/smart_contracts/hardhat.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart_contracts/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/smart_contracts/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart_contracts/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/smart_contracts/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/smart_contracts/scripts/deploy.js" beforeDir="false" afterPath="$PROJECT_DIR$/smart_contracts/scripts/deploy.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +109,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Python.python test_backend.py.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
@@ -51,6 +123,40 @@
       <recent name="D:\@Thesis\Project\project_sgb_v2\Secure_Geospatial_Blockchain" />
       <recent name="D:\@Thesis\Project\project_sgb_v2\Secure_Geospatial_Blockchain\backend\data_processing" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="pip install -r requirements.txt" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="python test_backend.py" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Secure_Geospatial_Blockchain" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="test_backend.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.python test_backend.py" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
