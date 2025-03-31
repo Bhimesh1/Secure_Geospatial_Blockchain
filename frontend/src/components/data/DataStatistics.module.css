@@ -1,0 +1,101 @@
+.card {
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.cardDark {
+  background-color: #1f2937;
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.titleDark {
+  color: #ffffff;
+}
+
+.section {
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.sectionDark {
+  background-color: #374151;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.labelDark {
+  color: #d1d5db;
+}
+
+.value {
+  font-size: 0.875rem;
+  color: #111827;
+}
+
+.valueDark {
+  color: #ffffff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.full {
+  grid-column: span 2;
+}
+
+.region {
+  background-color: #ffffff;
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+
+.regionDark {
+  background-color: #1f2937;
+}
+
+.regionLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #111827;
+}
+
+.regionLabelDark {
+  color: #ffffff;
+}
+
+.regionCount {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #3b82f6;
+}
+
+.regionCountDark {
+  color: #60a5fa;
+}
+
+.regionPercent {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.regionPercentDark {
+  color: #d1d5db;
+}

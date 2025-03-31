@@ -1,0 +1,45 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9fafb;
+  transition: background-color 0.3s ease;
+}
+
+.layout.dark {
+  background-color: #111827;
+}
+
+.main {
+  flex: 1;
+  padding-top: 4rem; /* Account for fixed navbar */
+  padding-bottom: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Add smooth transitions for page content */
+.main > * {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main {
+    padding-top: 5rem; /* Account for mobile navbar */
+  }
+}
