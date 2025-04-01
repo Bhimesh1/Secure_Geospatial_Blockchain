@@ -6,6 +6,7 @@ import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 import DataManagement from './pages/DataManagement';
 import BlockchainManagement from './pages/BlockchainManagement';
+import LearnMore from './pages/LearnMore';
 import './output.css';
 
 
@@ -20,6 +21,7 @@ function App() {
             <Route path="dashboard" element={<Dashboard />} />
             <Route path="data" element={<DataManagement />} />
             <Route path="blockchain" element={<BlockchainManagement />} />
+            <Route path="learn-more" element={<LearnMore />} />
           </Route>
         </Routes>
       </Router>

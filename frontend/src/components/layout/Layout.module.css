@@ -2,8 +2,9 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #f9fafb;
+  background-color: var(--background-primary);
   transition: background-color 0.3s ease;
+  width: 100%;
 }
 
 .layout.dark {
@@ -13,12 +14,8 @@
 .main {
   flex: 1;
   padding-top: 4rem; /* Account for fixed navbar */
-  padding-bottom: 2rem;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  background-color: var(--background-primary);
 }
 
 /* Add smooth transitions for page content */
@@ -42,4 +39,10 @@
   .main {
     padding-top: 5rem; /* Account for mobile navbar */
   }
+}
+
+.content {
+  width: 100%;
+  min-height: calc(100vh - 64px); /* Subtract header height */
+  background-color: var(--background-primary);
 }

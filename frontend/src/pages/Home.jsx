@@ -62,7 +62,7 @@ const Home = () => {
             <Link to="/dashboard" className={styles.primaryButton}>
               Get Started
             </Link>
-            <Link to="/data" className={styles.secondaryButton}>
+            <Link to="/learn-more" className={styles.secondaryButton}>
               Learn More
             </Link>
           </div>

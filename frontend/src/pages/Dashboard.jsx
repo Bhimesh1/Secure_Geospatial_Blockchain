@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { useContext } from 'react';
-import { ThemeContext } from '../contexts/ThemeContext';
 import api from '../services/api';
 import FileList from '../components/data/FileList';
 import MapView from '../components/map/MapView';
@@ -9,11 +7,12 @@ import DataStatistics from '../components/data/DataStatistics';
 import styles from './Dashboard.module.css';
 
 const Dashboard = () => {
-  const { darkMode } = useContext(ThemeContext);
   const [dataIds, setDataIds] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [geospatialData, setGeospatialData] = useState(null);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [mapMode, setMapMode] = useState('markers');
   const [stats, setStats] = useState({
     totalFiles: 0,
     totalSize: '0 MB',
@@ -21,10 +20,22 @@ const Dashboard = () => {
     blockchainStatus: 'Connected'
   });
 
-  useEffect(() => {
-    fetchDataIds();
-    fetchStats();
-  }, []);
+  const formatDate = (date) => {
+    const day = date.getDate().toString().padStart(2, '0');
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+  };
+
+  const fetchStats = useCallback(() => {
+    setStats(prevStats => ({
+      ...prevStats,
+      totalFiles: dataIds.length,
+      totalSize: '2.5 MB',
+      lastUpdated: formatDate(new Date()),
+      blockchainStatus: 'Connected'
+    }));
+  }, [dataIds]);
 
   const fetchDataIds = async () => {
     try {
@@ -38,15 +49,16 @@ const Dashboard = () => {
     }
   };
 
-  const fetchStats = async () => {
-    // Mock stats for now - replace with actual API calls
-    setStats({
-      totalFiles: dataIds.length,
-      totalSize: '2.5 MB',
-      lastUpdated: new Date().toLocaleDateString(),
-      blockchainStatus: 'Connected'
-    });
-  };
+  useEffect(() => {
+    const loadInitialData = async () => {
+      await fetchDataIds();
+    };
+    loadInitialData();
+  }, []); // Initial load only
+
+  useEffect(() => {
+    fetchStats();
+  }, [fetchStats]); // Will run when dataIds changes because fetchStats depends on dataIds
 
   const handleFileSelect = (fileName) => {
     if (fileName.endsWith('.json')) {
@@ -64,6 +76,50 @@ const Dashboard = () => {
       setGeospatialData(null);
     }
   };
+
+  const handleRefresh = async () => {
+    await fetchDataIds();
+  };
+
+  const handleFullscreen = () => {
+    const element = document.querySelector(`.${styles.mapSection}`);
+    if (!element) return;
+
+    if (!isFullscreen) {
+      if (element.requestFullscreen) {
+        element.requestFullscreen();
+      } else if (element.webkitRequestFullscreen) {
+        element.webkitRequestFullscreen();
+      } else if (element.msRequestFullscreen) {
+        element.msRequestFullscreen();
+      }
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) {
+        document.msExitFullscreen();
+      }
+    }
+    setIsFullscreen(!isFullscreen);
+  };
+
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
+    document.addEventListener('msfullscreenchange', handleFullscreenChange);
+
+    return () => {
+      document.removeEventListener('fullscreenchange', handleFullscreenChange);
+      document.removeEventListener('webkitfullscreenchange', handleFullscreenChange);
+      document.removeEventListener('msfullscreenchange', handleFullscreenChange);
+    };
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -138,14 +194,34 @@ const Dashboard = () => {
         {/* Map Section */}
         <div className={styles.mapSection}>
           <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionTitle}>Geospatial Data Visualization</h2>
+            <h2 className={styles.sectionTitle}>Geospatial Visualization</h2>
             <div className={styles.sectionActions}>
-              <button className={styles.iconButton} title="Refresh">
+              <div className={styles.mapControls}>
+                <button 
+                  className={`${styles.mapControl} ${mapMode === 'markers' ? styles.active : ''}`}
+                  onClick={() => setMapMode('markers')}
+                >
+                  Markers
+                </button>
+                <button 
+                  className={`${styles.mapControl} ${mapMode === 'heatmap' ? styles.active : ''}`}
+                  onClick={() => setMapMode('heatmap')}
+                >
+                  Heatmap
+                </button>
+                <button 
+                  className={`${styles.mapControl} ${mapMode === 'clusters' ? styles.active : ''}`}
+                  onClick={() => setMapMode('clusters')}
+                >
+                  Clusters
+                </button>
+              </div>
+              <button className={styles.iconButton} title="Refresh" onClick={handleRefresh}>
                 <svg className={styles.icon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                 </svg>
               </button>
-              <button className={styles.iconButton} title="Fullscreen">
+              <button className={styles.iconButton} title="Fullscreen" onClick={handleFullscreen}>
                 <svg className={styles.icon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
                 </svg>
@@ -153,7 +229,7 @@ const Dashboard = () => {
             </div>
           </div>
           <div className={styles.mapContainer}>
-            <MapView data={geospatialData} />
+            <MapView data={geospatialData} mode={mapMode} />
           </div>
         </div>
 
