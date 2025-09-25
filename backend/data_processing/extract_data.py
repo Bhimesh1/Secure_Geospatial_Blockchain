@@ -24,6 +24,9 @@ def extract_geospatial_data():
     except Exception as e:
         print(f"Error reading Excel file: {str(e)}")
         return
+    except ValueError as ve:
+        print(f"Error: {ve}")
+        return
 
     # Display the first few rows and column names
     print("\nDataset Overview:")

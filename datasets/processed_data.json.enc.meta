@@ -1,0 +1,7 @@
+{
+  "original_filename": "processed_data.json",
+  "encrypted_filename": "processed_data.json.enc",
+  "encryption_timestamp": "2025-04-09T16:55:05.878651",
+  "data_hash": "d321629e277471ed2f713fb8000665976d53650ddbe352cbe1c879e1be1ce17c",
+  "encryption_method": "AES-256-CBC"
+}

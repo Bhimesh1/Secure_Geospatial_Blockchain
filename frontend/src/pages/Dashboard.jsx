@@ -4,6 +4,7 @@ import api from '../services/api';
 import FileList from '../components/data/FileList';
 import MapView from '../components/map/MapView';
 import DataStatistics from '../components/data/DataStatistics';
+import PreUploadedDatasets from '../components/data/PreUploadedDatasets';
 import styles from './Dashboard.module.css';
 
 const Dashboard = () => {
@@ -13,6 +14,7 @@ const Dashboard = () => {
   const [geospatialData, setGeospatialData] = useState(null);
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [mapMode, setMapMode] = useState('markers');
+  const [activeTab, setActiveTab] = useState('datasets'); // 'datasets' or 'blockchain'
   const [stats, setStats] = useState({
     totalFiles: 0,
     totalSize: '0 MB',
@@ -60,21 +62,9 @@ const Dashboard = () => {
     fetchStats();
   }, [fetchStats]); // Will run when dataIds changes because fetchStats depends on dataIds
 
-  const handleFileSelect = (fileName) => {
-    if (fileName.endsWith('.json')) {
-      loadJsonData(fileName);
-    }
-  };
-
-  const loadJsonData = async (fileName) => {
-    try {
-      const response = await fetch(`http://localhost:8001/datasets/${fileName}`);
-      const data = await response.json();
-      setGeospatialData(data);
-    } catch (err) {
-      console.error('Error loading JSON data:', err);
-      setGeospatialData(null);
-    }
+  const handleFileSelect = (data) => {
+    // Set the geospatial data directly
+    setGeospatialData(data);
   };
 
   const handleRefresh = async () => {
@@ -189,7 +179,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      {/* Main Content Grid */}
+      {/* Main Grid */}
       <div className={styles.mainGrid}>
         {/* Map Section */}
         <div className={styles.mapSection}>
@@ -233,48 +223,69 @@ const Dashboard = () => {
           </div>
         </div>
 
-        {/* Data List Section */}
+        {/* Data Section */}
         <div className={styles.dataSection}>
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Your Data</h2>
             <div className={styles.sectionActions}>
-              <button className={styles.iconButton} title="Upload">
+              <Link to="/data" className={styles.uploadButton}>
                 <svg className={styles.icon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12" />
                 </svg>
-              </button>
+                Upload Data
+              </Link>
             </div>
           </div>
+          <div className={styles.dataTabs}>
+            <button
+              className={`${styles.tabButton} ${activeTab === 'datasets' ? styles.active : ''}`}
+              onClick={() => setActiveTab('datasets')}
+            >
+              Pre-uploaded Datasets
+            </button>
+            <button
+              className={`${styles.tabButton} ${activeTab === 'blockchain' ? styles.active : ''}`}
+              onClick={() => setActiveTab('blockchain')}
+            >
+              Your Blockchain Data
+            </button>
+          </div>
           <div className={styles.dataContainer}>
-            {loading && (
-              <div className={styles.loadingState}>
-                <div className={styles.spinner}></div>
-                <p>Loading your data...</p>
-              </div>
-            )}
-            {error && (
-              <div className={styles.errorState}>
-                <svg className={styles.errorIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-                <p>{error}</p>
-              </div>
-            )}
-            {!loading && dataIds.length === 0 && (
-              <div className={styles.emptyState}>
-                <svg className={styles.emptyIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
-                </svg>
-                <p>No data stored on the blockchain yet</p>
-                <Link to="/data" className={styles.emptyButton}>
-                  Upload Data
-                </Link>
-              </div>
-            )}
-            {dataIds.length > 0 && (
-              <div className={styles.dataList}>
-                <FileList onFileSelect={handleFileSelect} />
-              </div>
+            {activeTab === 'datasets' ? (
+              <PreUploadedDatasets onFileSelect={handleFileSelect} />
+            ) : (
+              <>
+                {loading && (
+                  <div className={styles.loadingState}>
+                    <div className={styles.spinner}></div>
+                    <p>Loading your data...</p>
+                  </div>
+                )}
+                {error && (
+                  <div className={styles.errorState}>
+                    <svg className={styles.errorIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    <p>{error}</p>
+                  </div>
+                )}
+                {!loading && dataIds.length === 0 && (
+                  <div className={styles.emptyState}>
+                    <svg className={styles.emptyIcon} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                    </svg>
+                    <p>No data stored on the blockchain yet</p>
+                    <Link to="/data" className={styles.emptyButton}>
+                      Upload Data
+                    </Link>
+                  </div>
+                )}
+                {dataIds.length > 0 && (
+                  <div className={styles.dataList}>
+                    <FileList onFileSelect={handleFileSelect} />
+                  </div>
+                )}
+              </>
             )}
           </div>
         </div>

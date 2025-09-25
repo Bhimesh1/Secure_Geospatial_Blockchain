@@ -1,0 +1,107 @@
+.container {
+  background-color: var(--background-secondary);
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.datasetList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.datasetItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: var(--background-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.datasetItem:hover {
+  background-color: var(--background-hover);
+  transform: translateY(-1px);
+}
+
+.datasetItem.selected {
+  background-color: var(--primary-light);
+  border: 1px solid var(--primary);
+}
+
+.datasetIcon {
+  font-size: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.datasetInfo {
+  flex: 1;
+}
+
+.datasetName {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.datasetMeta {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.loadingState,
+.errorState,
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.spinner {
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.errorIcon,
+.emptyIcon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--error);
+  margin-bottom: 1rem;
+} 

@@ -8,27 +8,28 @@ import Dashboard from './pages/Dashboard';
 import DataManagement from './pages/DataManagement';
 import BlockchainManagement from './pages/BlockchainManagement';
 import { ThemeProvider } from './contexts/ThemeContext';
+import './styles/main.css';
 
 function App() {
   return (
-      <ThemeProvider>
-    <Router>
-      <div className="flex h-screen bg-gray-100">
-        <Sidebar />
-        <div className="flex flex-col flex-1 overflow-hidden">
-          <Navbar />
-          <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-100 p-4">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/data" element={<DataManagement />} />
-              <Route path="/blockchain" element={<BlockchainManagement />} />
-            </Routes>
-          </main>
-          <Footer />
+    <ThemeProvider>
+      <Router>
+        <div className="app-layout">
+          <Sidebar />
+          <div className="main-content">
+            <Navbar />
+            <main className="main-area">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/data" element={<DataManagement />} />
+                <Route path="/blockchain" element={<BlockchainManagement />} />
+              </Routes>
+            </main>
+            <Footer />
+          </div>
         </div>
-      </div>
-    </Router>
+      </Router>
     </ThemeProvider>
   );
 }

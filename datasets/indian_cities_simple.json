@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "lat": 19.0760,
+      "long": 72.8777,
+      "name": "Mumbai",
+      "state": "Maharashtra",
+      "population": "20.4 million",
+      "type": "Metropolitan City",
+      "intensity": 0.9
+    },
+    {
+      "id": 2,
+      "lat": 28.6139,
+      "long": 77.2090,
+      "name": "Delhi",
+      "state": "Delhi",
+      "population": "30.3 million",
+      "type": "Capital City",
+      "intensity": 1.0
+    },
+    {
+      "id": 3,
+      "lat": 12.9716,
+      "long": 77.5946,
+      "name": "Bangalore",
+      "state": "Karnataka",
+      "population": "12.3 million",
+      "type": "Tech Hub",
+      "intensity": 0.7
+    },
+    {
+      "id": 4,
+      "lat": 23.0225,
+      "long": 72.5800,
+      "name": "Ahmedabad",
+      "state": "Gujarat",
+      "population": "7.2 million",
+      "type": "Industrial City",
+      "intensity": 0.5
+    },
+    {
+      "id": 5,
+      "lat": 13.0827,
+      "long": 80.2707,
+      "name": "Chennai",
+      "state": "Tamil Nadu",
+      "population": "10.9 million",
+      "type": "Metropolitan City",
+      "intensity": 0.6
+    },
+    {
+      "id": 6,
+      "lat": 22.5726,
+      "long": 88.3639,
+      "name": "Kolkata",
+      "state": "West Bengal",
+      "population": "14.8 million",
+      "type": "Metropolitan City",
+      "intensity": 0.8
+    },
+    {
+      "id": 7,
+      "lat": 17.3850,
+      "long": 78.4867,
+      "name": "Hyderabad",
+      "state": "Telangana",
+      "population": "9.7 million",
+      "type": "Tech Hub",
+      "intensity": 0.6
+    },
+    {
+      "id": 8,
+      "lat": 18.5204,
+      "long": 73.8567,
+      "name": "Pune",
+      "state": "Maharashtra",
+      "population": "6.3 million",
+      "type": "Educational Hub",
+      "intensity": 0.4
+    },
+    {
+      "id": 9,
+      "lat": 26.9124,
+      "long": 75.7873,
+      "name": "Jaipur",
+      "state": "Rajasthan",
+      "population": "3.1 million",
+      "type": "Tourist City",
+      "intensity": 0.3
+    },
+    {
+      "id": 10,
+      "lat": 21.1702,
+      "long": 72.8311,
+      "name": "Surat",
+      "state": "Gujarat",
+      "population": "6.6 million",
+      "type": "Industrial City",
+      "intensity": 0.4
+    }
+  ]
+} 

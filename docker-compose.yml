@@ -1,28 +1,47 @@
-version: '3'
-
 services:
-  api:
-    build: .
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backend
+    restart: unless-stopped
     ports:
-      - "8001:8001"
+      - "8000:8000"
     volumes:
-      - ./datasets:/app/datasets
+      - ./backend:/app/backend
+      - ./datasets:/app/backend/datasets
     environment:
+      - PYTHONUNBUFFERED=1
       - BLOCKCHAIN_PROVIDER=http://ganache:8545
       - CONTRACT_ADDRESS=${CONTRACT_ADDRESS}
       - PRIVATE_KEY=${PRIVATE_KEY}
     depends_on:
       - ganache
+    networks:
+      - app-network
 
   frontend:
-    build: ./frontend/secure-geo-blockchain
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    restart: unless-stopped
     ports:
       - "80:80"
     depends_on:
-      - api
+      - backend
+    networks:
+      - app-network
 
   ganache:
     image: trufflesuite/ganache-cli:latest
+    container_name: ganache
     ports:
       - "8545:8545"
     command: --deterministic --mnemonic "test test test test test test test test test test test junk"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

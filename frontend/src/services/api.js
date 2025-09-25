@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:8001/api';
+const API_URL = 'http://127.0.0.1:8001/api';
 
 const api = {
   // Data endpoints
@@ -23,6 +23,14 @@ const api = {
 
   listFiles: () => {
     return axios.get(`${API_URL}/data/files`);
+  },
+
+  listPreUploadedDatasets: () => {
+    return axios.get(`${API_URL}/data/datasets`);
+  },
+
+  getDatasetContent: (datasetName) => {
+    return axios.get(`${API_URL}/data/datasets/${encodeURIComponent(datasetName)}`);
   },
 
   // Blockchain endpoints
@@ -52,7 +60,7 @@ const api = {
   },
 
   checkAccess: (dataId, address) => {
-    return axios.get(`${API_URL}/blockchain/access/check?data_id=${dataId}&address=${address}`);
+    return axios.get(`${API_URL}/blockchain/access/check?data_id=${encodeURIComponent(dataId)}&address=${encodeURIComponent(address)}`);
   },
 
   getDataIds: (ownedOnly = false) => {

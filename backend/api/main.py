@@ -1,6 +1,7 @@
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException, Depends, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from typing import Optional, List, Dict, Any
 import os
@@ -35,6 +36,9 @@ app.add_middleware(
 # Set configuration
 UPLOAD_FOLDER = os.path.join(os.getcwd(), 'datasets')
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+
+# Mount the datasets directory
+app.mount("/datasets", StaticFiles(directory=UPLOAD_FOLDER), name="datasets")
 
 # Include routers
 app.include_router(data_routes.router)

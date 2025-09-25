@@ -19,3 +19,13 @@ if __name__ == "__main__":
         print(f"Total records processed: {len(processed_data)}")
     else:
         print("\nData processing failed. Check the error messages above.")
+
+
+
+
+
+
+
+
+
+

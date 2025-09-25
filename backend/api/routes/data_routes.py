@@ -186,3 +186,59 @@ async def list_files():
     return {
         'files': files
     }
+
+
+@router.get("/datasets")
+async def list_datasets():
+    """List pre-uploaded datasets in the dataset directory"""
+    upload_folder = get_upload_folder()
+    datasets = []
+    
+    # Define the allowed dataset extensions
+    DATASET_EXTENSIONS = {'xlsx', 'csv', 'json'}
+    
+    # Helper function to get human-readable file size
+    def get_human_readable_size(size_in_bytes):
+        for unit in ['B', 'KB', 'MB', 'GB']:
+            if size_in_bytes < 1024.0:
+                return f"{size_in_bytes:.1f} {unit}"
+            size_in_bytes /= 1024.0
+        return f"{size_in_bytes:.1f} TB"
+    
+    for filename in os.listdir(upload_folder):
+        file_path = os.path.join(upload_folder, filename)
+        if os.path.isfile(file_path):
+            # Skip encrypted files, keys, and metadata
+            if not any(filename.endswith(ext) for ext in ['.enc', '.key', '.meta']):
+                ext = filename.split('.')[-1].lower()
+                if ext in DATASET_EXTENSIONS:
+                    size = os.path.getsize(file_path)
+                    datasets.append({
+                        'name': filename,
+                        'size': get_human_readable_size(size),
+                        'type': ext,
+                        'modified': os.path.getmtime(file_path)
+                    })
+    
+    return {
+        'datasets': datasets
+    }
+
+
+@router.get("/datasets/{dataset_name}")
+async def get_dataset_content(dataset_name: str):
+    """Get the content of a specific dataset"""
+    upload_folder = get_upload_folder()
+    file_path = os.path.join(upload_folder, dataset_name)
+    
+    # Check if the file exists
+    if not os.path.exists(file_path):
+        raise HTTPException(status_code=404, detail=f"Dataset {dataset_name} not found")
+    
+    try:
+        # Read and return the JSON content
+        with open(file_path, 'r') as f:
+            data = json.load(f)
+        return data
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error reading dataset: {str(e)}")

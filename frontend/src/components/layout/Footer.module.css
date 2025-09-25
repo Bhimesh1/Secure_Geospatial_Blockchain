@@ -1,13 +1,8 @@
 .footer {
-  background-color: #ffffff;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--background-secondary);
+  border-top: 1px solid var(--border);
   padding: 4rem 0 2rem;
   transition: all 0.3s ease;
-}
-
-.footer.dark {
-  background-color: #111827;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .container {
@@ -31,26 +26,27 @@
 
 .title {
   font-size: 1.5rem;
-  font-weight: 700;
-  color: #3b82f6;
+  font-weight: 800;
+  color: var(--primary);
   margin: 0;
+  letter-spacing: -0.025em;
 }
 
 .description {
-  color: #6b7280;
+  color: var(--text-secondary);
   line-height: 1.6;
   margin: 0;
+  font-size: 0.95rem;
 }
 
 .subtitle {
   font-size: 1.125rem;
-  font-weight: 600;
-  color: #374151;
+  font-weight: 700;
+  color: var(--text-primary);
   margin: 0 0 1rem 0;
-}
-
-.dark .subtitle {
-  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.875rem;
 }
 
 .links {
@@ -60,17 +56,16 @@
 }
 
 .link {
-  color: #6b7280;
+  color: var(--text-secondary);
   text-decoration: none;
   transition: all 0.2s ease;
+  font-weight: 500;
+  font-size: 0.875rem;
 }
 
 .link:hover {
-  color: #3b82f6;
-}
-
-.dark .link {
-  color: #9ca3af;
+  color: var(--primary);
+  transform: translateX(4px);
 }
 
 .social {
@@ -79,44 +74,36 @@
 }
 
 .socialLink {
-  color: #6b7280;
+  color: var(--text-secondary);
   transition: all 0.2s ease;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 1rem;
+  background-color: var(--background-hover);
 }
 
 .socialLink:hover {
-  color: #3b82f6;
-  background-color: rgba(59, 130, 246, 0.1);
-}
-
-.dark .socialLink {
-  color: #9ca3af;
+  color: var(--primary);
+  background-color: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .socialIcon {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .bottom {
   padding-top: 2rem;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.dark .bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--border);
 }
 
 .copyright {
-  color: #6b7280;
+  color: var(--text-secondary);
   text-align: center;
   margin: 0;
   font-size: 0.875rem;
-}
-
-.dark .copyright {
-  color: #9ca3af;
+  font-weight: 500;
 }
 
 /* Responsive styles */

@@ -79,6 +79,14 @@ class BlockchainService:
             tx_receipt = self._sign_and_send_txn(txn)
 
             print(f"Data stored on blockchain. Transaction hash: {tx_receipt.transactionHash.hex()}")
+
+            # Important: Automatically grant access to the storing account itself
+            try:
+                self.grant_access(data_id, self.account.address)
+                print(f"Self-access granted for data ID: {data_id}")
+            except Exception as e:
+                print(f"Warning: Could not grant self-access: {str(e)}")
+
             return tx_receipt
 
         except ContractLogicError as e:
@@ -106,7 +114,8 @@ class BlockchainService:
         """
         try:
             # Call the retrieveData function on the smart contract
-            result = self.contract.functions.retrieveData(data_id).call()
+            # IMPORTANT FIX: Specify the 'from' address for the call
+            result = self.contract.functions.retrieveData(data_id).call({'from': self.account.address})
 
             # Parse the result
             cipher_hash = result[0]
@@ -123,6 +132,16 @@ class BlockchainService:
                 print(f"Error: Data ID '{data_id}' not found on the blockchain")
             elif "Not authorized" in error_msg:
                 print(f"Error: Not authorized to access data ID '{data_id}'")
+                print(f"Current account: {self.account.address}")
+                # Check if we're the owner
+                try:
+                    all_ids = self.get_all_data_ids()
+                    my_ids = self.get_my_data_ids()
+                    print(f"All data IDs: {all_ids}")
+                    print(f"My data IDs: {my_ids}")
+                    print(f"Is this ID owned by us? {data_id in my_ids}")
+                except Exception:
+                    pass
             else:
                 print(f"Contract error: {error_msg}")
             raise
@@ -208,10 +227,46 @@ class BlockchainService:
             # Ensure address is checksum format
             address = Web3.toChecksumAddress(address)
 
-            # Call the checkAccess function on the smart contract
-            has_access = self.contract.functions.checkAccess(data_id, address).call()
+            # Log parameters for debugging
+            print(f"BlockchainService.check_access called with:")
+            print(f"  data_id: '{data_id}' (length: {len(data_id)})")
+            print(f"  address: '{address}'")
 
-            return has_access
+            # Get all data IDs to see if this one exists
+            try:
+                all_ids = self.contract.functions.getAllDataIds().call({'from': self.account.address})
+                if data_id not in all_ids:
+                    print(f"Warning: Data ID '{data_id}' not found in blockchain (available IDs: {all_ids})")
+            except Exception as e:
+                print(f"Could not verify data ID: {str(e)}")
+
+            # Try with explicit transaction parameters
+            try:
+                # Call the checkAccess function with explicit gas and account
+                has_access = self.contract.functions.checkAccess(
+                    data_id,
+                    address
+                ).call({
+                    'from': self.account.address,
+                    'gas': 3000000  # High gas limit for debugging
+                })
+
+                print(f"Access check successful: {has_access}")
+                return has_access
+
+            except Exception as e:
+                error_msg = str(e)
+                print(f"First attempt failed: {error_msg}")
+
+                # Try again with different parameters as fallback
+                print("Trying alternative approach...")
+                has_access = self.contract.functions.checkAccess(
+                    data_id,
+                    address
+                ).call()
+
+                print(f"Second attempt successful: {has_access}")
+                return has_access
 
         except Exception as e:
             print(f"Error checking access: {str(e)}")
@@ -226,7 +281,8 @@ class BlockchainService:
         """
         try:
             # Call the getAllDataIds function on the smart contract
-            data_ids = self.contract.functions.getAllDataIds().call()
+            # IMPORTANT FIX: Specify who is making the call
+            data_ids = self.contract.functions.getAllDataIds().call({'from': self.account.address})
 
             return data_ids
 
@@ -243,6 +299,7 @@ class BlockchainService:
         """
         try:
             # Call the getMyDataIds function on the smart contract
+            # Already specifies correct caller
             data_ids = self.contract.functions.getMyDataIds().call({'from': self.account.address})
 
             return data_ids

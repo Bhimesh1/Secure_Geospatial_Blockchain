@@ -6,7 +6,7 @@ async function main() {
   const GeoDataStorage = await hre.ethers.getContractFactory("GeoDataStorage");
 
   // The address where the contract is deployed (replace with your actual address)
-  const contractAddress = "0x0165878A594ca255338adfa4d48449f69242Eb8F";
+  const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
 
   // Connect to the deployed contract
   const geoDataStorage = GeoDataStorage.attach(contractAddress);

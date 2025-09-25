@@ -122,6 +122,7 @@
   grid-template-columns: 2fr 1fr;
   gap: 2rem;
   margin-bottom: 2rem;
+  min-height: calc(100vh - 300px); /* Account for header and stats */
 }
 
 /* Map Section */
@@ -129,6 +130,10 @@
   background-color: var(--background-secondary);
   border-radius: 1rem;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 800px; /* Minimum height to accommodate map and location list */
 }
 
 .sectionHeader {
@@ -203,9 +208,15 @@
 }
 
 .mapContainer {
-  height: 400px;
+  flex: 1;
+  min-height: 0; /* Important for flex child to prevent overflow */
   position: relative;
-  background-color: var(--background-primary);
+  height: 100%;
+}
+
+/* Ensure the map container takes full height */
+.mapContainer > div {
+  height: 100%;
 }
 
 /* Data Section */
@@ -213,6 +224,70 @@
   background-color: var(--background-secondary);
   border-radius: 1rem;
   overflow: hidden;
+}
+
+.uploadButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.uploadButton:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+.uploadButton .icon {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+.dataTabs {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.tabButton {
+  padding: 1rem 1.5rem;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.tabButton:hover {
+  color: var(--text-primary);
+}
+
+.tabButton.active {
+  color: var(--primary);
+}
+
+.tabButton.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--primary);
 }
 
 .dataContainer {
@@ -303,5 +378,13 @@
 
   .statsGrid {
     grid-template-columns: 1fr;
+  }
+
+  .dataTabs {
+    padding: 0 1rem;
+  }
+
+  .tabButton {
+    padding: 0.75rem 1rem;
   }
 }

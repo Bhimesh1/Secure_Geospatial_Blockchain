@@ -1,0 +1,7 @@
+{
+  "original_filename": "10MB_sample.json",
+  "encrypted_filename": "10MB_sample.json.enc",
+  "encryption_timestamp": "2025-04-22T07:32:03.173638",
+  "data_hash": "99f092cfe507995bc20401d07c35119b175ec7cb51930a5e2ad9c6952038d402",
+  "encryption_method": "AES-256-CBC"
+}

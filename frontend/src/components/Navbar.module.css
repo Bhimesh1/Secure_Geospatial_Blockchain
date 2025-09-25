@@ -1,0 +1,80 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--background-secondary);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.logo a {
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.logo a:hover {
+  color: var(--primary);
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+}
+
+.navLinks a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-weight: 500;
+}
+
+.navLinks a:hover {
+  color: var(--text-primary);
+}
+
+.walletSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.error {
+  color: #ef4444;
+  font-size: 0.875rem;
+}
+
+.walletButton {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  outline: none;
+}
+
+.walletButton:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.walletButton.connected {
+  background-color: var(--background-hover);
+  border: 1px solid var(--primary);
+  color: var(--text-primary);
+}
+
+.walletButton.connected:hover {
+  background-color: var(--primary-light);
+} 
