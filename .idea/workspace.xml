@@ -8,123 +8,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d3088b2-237c-4828-bcbb-344c3f62b195" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/ipfs_uploader.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/test_ipfs_upload.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/debug_blockchain.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/generate_10mb_csv.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/generate_qa_report.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grant_access.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mer.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/performance_benchmark.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testing/task_timing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testing/test_backend_v2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/z_mdfls/diagram.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/utils/ipfs_upload.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/render.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/api/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/api/routes/blockchain_routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/routes/blockchain_routes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/api/routes/data_routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/routes/data_routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/blockchain/blockchain_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/blockchain/blockchain_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/data_processing/extract_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/data_processing/extract_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/addresses.json" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/addresses.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/addresses.json.enc" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/addresses.json.enc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/addresses.json.enc.key" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/addresses.json.enc.key" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/addresses.json.enc.meta" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/addresses.json.enc.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/formatted_data.enc" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/formatted_data.enc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/formatted_data.json" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/formatted_data.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/formatted_data.key" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/formatted_data.key" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/processed_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/processed_data.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deployment.md" beforeDir="false" afterPath="$PROJECT_DIR$/z_mdfls/deployment.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain-v2/craco.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain-v2/postcss.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain-v2/src/components/Card.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain-v2/src/components/Map.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain-v2/src/components/Navbar.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain-v2/src/components/Sidebar.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain-v2/src/pages/BlockchainAccess.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain-v2/src/pages/Dashboard.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain-v2/src/pages/Home.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain-v2/src/pages/UploadData.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain-v2/tailwind.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/craco.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/nginx.conf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/postcss.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/src/App.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/src/components/blockchain/AccessControl.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/src/components/blockchain/BlockchainStorage.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/src/components/blockchain/DataRetrieval.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/src/components/data/DataStatistics.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/src/components/data/EncryptionForm.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/src/components/data/FileList.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/src/components/data/FileUpload.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/src/components/layout/Footer.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/src/components/layout/Layout.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/src/components/layout/Navbar.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/src/components/layout/Sidebar.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/src/components/map/MapView.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/src/contexts/ThemeContext.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/src/pages/BlockchainManagement.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/src/pages/Dashboard.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/src/pages/DataManagement.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/src/pages/Home.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/src/services/api.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/src/services/web3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/src/setupTests.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend-old/secure-geo-blockchain_v-t1/tailwind.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/blockchain/AccessControl.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/blockchain/AccessControl.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/blockchain/AccessControl.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/blockchain/AccessControl.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/blockchain/BlockchainStorage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/blockchain/BlockchainStorage.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/blockchain/DataRetrieval.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/blockchain/DataRetrieval.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/data/EncryptionForm.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/data/EncryptionForm.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/data/FileList.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/data/FileList.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/data/FileUpload.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/data/FileUpload.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/layout/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/layout/Footer.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/layout/Footer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/layout/Footer.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/layout/Navbar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/layout/Navbar.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/map/MapView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/map/MapView.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/map/MapView.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/map/MapView.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/output.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/output.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/BlockchainManagement.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/BlockchainManagement.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/BlockchainManagement.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/BlockchainManagement.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Dashboard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Dashboard.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Dashboard.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/DataManagement.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/DataManagement.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/LearnMore.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/LearnMore.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/LearnMore.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/LearnMore.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/services/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/services/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/process_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/smart_contracts/scripts/store_hash.js" beforeDir="false" afterPath="$PROJECT_DIR$/smart_contracts/scripts/store_hash.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store_encrypted_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/testing/store_encrypted_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_backend.py" beforeDir="false" afterPath="$PROJECT_DIR$/testing/test_backend.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_blockchain.py" beforeDir="false" afterPath="$PROJECT_DIR$/testing/test_blockchain.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_fastapi.py" beforeDir="false" afterPath="$PROJECT_DIR$/testing/test_fastapi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/indian_cities.json.enc" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/indian_cities.json.enc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/indian_cities.json.enc.key" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/indian_cities.json.enc.key" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/indian_cities.json.enc.meta" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/indian_cities.json.enc.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

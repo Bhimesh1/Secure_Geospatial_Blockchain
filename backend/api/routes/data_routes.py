@@ -6,6 +6,8 @@ import os
 import json
 import shutil
 import uuid
+from backend.utils.ipfs_upload import upload_to_ipfs
+
 import pandas as pd
 from pathlib import Path
 from werkzeug.utils import secure_filename
@@ -151,18 +153,28 @@ async def encrypt_data(request: EncryptRequest):
         metadata = create_metadata(file_path, encrypted_path, data_hash)
         save_metadata(metadata, metadata_path)
 
+        # Upload encrypted file to IPFS
+        ipfs_cid = upload_to_ipfs(encrypted_path)
+
+        if not ipfs_cid:
+            raise HTTPException(status_code=500, detail="Failed to upload encrypted file to IPFS")
+
         # Save the key (in a real application, this should be securely stored)
         key_path = f"{encrypted_path}.key"
         with open(key_path, 'w') as f:
             f.write(aes_key)
 
+        # Add IPFS hash to response or metadata
         return {
-            'message': 'Data encrypted successfully',
+            'message': 'Data encrypted and uploaded to IPFS successfully',
             'original_file': request.file,
             'encrypted_file': os.path.basename(encrypted_path),
             'key_file': os.path.basename(key_path),
-            'metadata_file': os.path.basename(metadata_path)
+            'metadata_file': os.path.basename(metadata_path),
+            'ipfs_cid': ipfs_cid,
+            'ipfs_url': f"https://ipfs.io/ipfs/{ipfs_cid}"
         }
+
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error encrypting data: {str(e)}")
