@@ -8,13 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d3088b2-237c-4828-bcbb-344c3f62b195" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/utils/ipfs_upload.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/render.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/api/routes/data_routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/api/routes/data_routes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/indian_cities.json.enc" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/indian_cities.json.enc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/indian_cities.json.enc.key" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/indian_cities.json.enc.key" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datasets/indian_cities.json.enc.meta" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/indian_cities.json.enc.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
