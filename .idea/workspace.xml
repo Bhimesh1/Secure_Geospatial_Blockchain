@@ -8,8 +8,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d3088b2-237c-4828-bcbb-344c3f62b195" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/indian_cities.json.enc" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/indian_cities.json.enc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/indian_cities.json.enc.key" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/indian_cities.json.enc.key" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datasets/indian_cities.json.enc.meta" beforeDir="false" afterPath="$PROJECT_DIR$/datasets/indian_cities.json.enc.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +28,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="restore-379c9ea" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProblemsViewState">
@@ -50,12 +59,15 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/@Projects_v2/Prax&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/@Thesis/Project/project_sgb_v5/Secure_Geospatial_Blockchain/backend&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\@Thesis\Project\project_sgb_v5\Secure_Geospatial_Blockchain\backend" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\@Thesis\Project\project_sgb_v5\Secure_Geospatial_Blockchain\backend" />
       <recent name="D:\@Thesis\Project\project_sgb_v5\Secure_Geospatial_Blockchain\testing" />
@@ -94,6 +106,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.python test_backend.py" />
         <item itemvalue="Python.python test_backend.py" />
       </list>
     </recent_temporary>
