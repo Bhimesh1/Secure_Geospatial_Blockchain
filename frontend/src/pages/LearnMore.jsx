@@ -112,7 +112,7 @@ const LearnMore = () => {
   const { darkMode } = useContext(ThemeContext);
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${darkMode ? styles.containerDark : ''}`}>
       {/* Hero Section */}
       <section className={`${styles.hero} ${darkMode ? styles.heroDark : ''}`}>
         <div className={styles.heroContent}>

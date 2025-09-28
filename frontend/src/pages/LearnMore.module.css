@@ -1,20 +1,35 @@
 .container {
   min-height: 100vh;
-  background-color: var(--background-primary);
+  background-color: #ffffff; /* make page background pure white for seamless sections */
   color: var(--text-primary);
 }
 
+/* Add comfortable side gutters on medium screens as well */
+@media (max-width: 1200px) {
+  .content {
+    padding: 3rem clamp(1.25rem, 7vw, 4rem);
+  }
+  .statsSection {
+    padding: 3.5rem clamp(1.25rem, 7vw, 4rem);
+  }
+}
+
+/* Dark mode page background should be seamless with app's dark variables */
+.containerDark {
+  background-color: var(--background-primary);
+}
+
 .content {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 3rem 2rem;
+  padding: 3rem clamp(1rem, 6vw, 5rem);
 }
 
 /* Hero Section */
 .hero {
   background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
   color: white;
-  padding: 6rem 2rem;
+  padding: 6rem clamp(1rem, 6vw, 5rem);
   position: relative;
   overflow: hidden;
 }
@@ -64,14 +79,20 @@
 }
 
 .heroContent {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(420px, 900px) 1fr;
   gap: 4rem;
   align-items: center;
   position: relative;
   z-index: 1;
+}
+
+@media (min-width: 1536px) {
+  .heroContent {
+    grid-template-columns: minmax(520px, 700px) 1fr;
+  }
 }
 
 .heroTitle {
@@ -143,6 +164,29 @@
   height: 400px;
 }
 
+/* Prevent overlapping cards on medium screens by switching to inline layout */
+/*
+@media (max-width: 1200px) {
+  .heroVisual {
+    height: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+  .floatingCard {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    margin: 0;
+    animation: none;
+  }
+}
+*/
+
 .floatingCard {
   position: absolute;
   background: rgba(255, 255, 255, 0.1);
@@ -189,21 +233,26 @@
 
 /* Statistics Section */
 .statsSection {
-  background-color: var(--background-secondary);
+  background-color: transparent; /* seamless with white background */
   padding: 4rem 2rem;
-  margin: -2rem 0 4rem 0;
+  margin: 3rem 0 5rem 0; /* add more air below the stats area */
   position: relative;
-  z-index: 2;
-  border-radius: 2rem;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .statsGrid {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
+}
+
+@media (min-width: 1536px) {
+  .content { max-width: 1600px; }
+  .statsGrid { max-width: 1600px; }
 }
 
 .statCard {
@@ -461,7 +510,7 @@
 
 /* FAQ Section */
 .faqSection {
-  margin-bottom: 4rem;
+  margin: 5rem 0; /* consistent larger spacing */
   padding: 3rem 0;
 }
 
@@ -568,18 +617,14 @@
 }
 
 .section {
-  margin-bottom: 4rem;
-  padding: 2rem;
-  background-color: var(--background-secondary);
-  border-radius: 1rem;
-  border: 1px solid var(--border);
-  transition: all 0.3s ease;
+  margin: 4.5rem 0; /* more space between sections */
+  padding: 0; /* rely on inner spacing of elements for a flat, seamless look */
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  transition: none;
 }
 
-.section:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-}
 
 .section h2 {
   font-size: 1.75rem;
@@ -589,6 +634,11 @@
   letter-spacing: -0.025em;
   border-bottom: 2px solid var(--primary-light);
   padding-bottom: 0.5rem;
+}
+
+/* Subtle divider color in dark mode to avoid high contrast lines */
+.containerDark .section h2 {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
 }
 
 .section h3 {
@@ -1082,7 +1132,7 @@
 
 @media (max-width: 768px) {
   .content {
-    padding: 2rem 1rem;
+    padding: 2rem clamp(1.25rem, 6vw, 2rem); /* wider side gutters on small screens */
   }
 
   .hero {
@@ -1114,8 +1164,8 @@
   }
 
   .statsSection {
-    padding: 3rem 1rem;
-    margin: -1rem 0 3rem 0;
+    padding: 3rem clamp(1.25rem, 6vw, 2rem);
+    margin: 2rem 0 3rem 0; /* reduce on mobile */
   }
 
   .statsGrid {
@@ -1219,6 +1269,6 @@
   }
 
   .section {
-    padding: 1.5rem;
+    margin: 3rem 0; /* comfortable spacing on small screens */
   }
-} 
+}
